@@ -8,7 +8,7 @@ var express               = require("express"),
     passportLocalMongoose = require('passport-local-mongoose');
 
 
-mongoose.connect("mongodb://localhost/rideshare");
+mongoose.connect("mongodb://10.0.0.1/rideshare");
 
 /* Mongo Database Objects */
 var userSchema = new mongoose.Schema({
@@ -211,6 +211,6 @@ function isLoggedInLanding(req, res, next) {
 	}
 }
 
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log("The Rideshare server has started!");
 });
